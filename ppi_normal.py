@@ -26,7 +26,9 @@ no_of_edges = G.number_of_edges()
 print("Number of Nodes: ", no_of_nodes)
 print("Number of Edges: ", no_of_edges)
 pos = nx.spring_layout(G, k=1, iterations=50)
+plt.title("PPIN of Normal Human Bone")
 nx.draw(G, node_size=10, font_size=8, with_labels=True)
+
 plt.savefig("normal.png")
 
 print("Average Clustering Coefficient: ",nx.average_clustering(G))
@@ -44,21 +46,20 @@ print("Degree: ",degrees)
 for each in degrees:
 	degree_map[each[1]] += 1
 
-print(list(degree_map))
+#print(list(degree_map))
 lists=sorted(degree_map.items())
-
 #degree_map = dict(degree_map)
 #print(degree_map)
 x,y = zip(*lists)
-print(x)
-print(y)
+#print(x)
+#print(y)
+plt.clf()
 plt.plot(x,y)
+plt.title("Degree Distribution of Normal Human Bone PPIN")
 plt.ylabel("No. of vertices")
 plt.xlabel("Degree")
-plt.legend(loc="best")
-plt.show()
-
-print (list(dmap.items()))
+#plt.show()
+plt.savefig("degreeDist.png")
 
 hub_proteins = [degree for degree in degrees if degree[1] >= 12]
 

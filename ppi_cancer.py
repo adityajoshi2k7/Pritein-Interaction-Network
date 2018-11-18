@@ -25,6 +25,7 @@ no_of_edges = G.number_of_edges()
 print("Number of Nodes: ", no_of_nodes)
 print("Number of Edges: ", no_of_edges)
 pos = nx.spring_layout(G, k=1, iterations=50)
+plt.title("PPIN of Cancerous Human Bone")
 nx.draw(G, node_size=10, font_size=8, with_labels=True)
 plt.savefig("cancer.png")
 
