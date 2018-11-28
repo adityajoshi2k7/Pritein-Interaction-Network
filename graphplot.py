@@ -2,8 +2,6 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 
-
-
 plt.bar(['Cancerous','Normal'],[351,192],color=['indianred','mediumseagreen'])
 plt.xlabel('Type of Bone Tissue')
 plt.ylabel('Number of Nodes')
@@ -56,21 +54,9 @@ plt.title('Average number of Neighbors')
 plt.savefig('neighbors.png')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+plt.clf()
+plt.bar(['Cancerous','Normal'],[0.22900,0.20992],color=['indianred','mediumseagreen'])
+plt.xlabel('Type of Bone Tissue')
+plt.ylabel('Clustering Coefficient')
+plt.title('Clustering Coefficient')
+plt.savefig('cluster_coeff.png')
